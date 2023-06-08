@@ -9,16 +9,24 @@ Create an app that uses state management to UPDATE the app without refreshing (r
 END
 
 ### Functional ###
+
 START
 
-HTML
-CSS
+HTML - create boilerplate page
+CSS - use Bootstrap
+
 FUNCTIONS
+
 Initalize
+
 Render
+
 Handlers for buttons
+
 go - start - or navigate
+
 resetUI
+
 setState
 
 generateSymbols - 
@@ -26,6 +34,7 @@ generateSymbols -
 Variables:
 
 Functions:
+
 changeState();
 
 ### Object oriented ###
