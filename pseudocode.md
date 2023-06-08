@@ -4,7 +4,19 @@ START
 INIT - set up variables, state, click handlers, view
 RENDER - UI based on variables and state of the program.
 
-Create an app that uses state management to UPDATE the app without refreshing (reloading) the page. The app will be a mind reading app using the multiples of 9. There will be a single button on the page to progress to the next page. There will be 6 views total. The button will need to change to a reset button after the initial press. Symbols will need to be RANDOMIZED to SYMBOLS. Multiples of 9 need to be the same SYMBOL.
+Create an app that uses state management to UPDATE the app without refreshing (reloading) the page. 
+
+The app will be a mind reading app using the multiples of 9. 
+
+There will be a single button on the page to progress to the next page.
+
+There will be 6 views total. 
+
+The button will need to change to a reset button after the initial press. 
+
+Symbols will need to be RANDOMIZED to SYMBOLS. 
+
+Multiples of 9 need to be the same SYMBOL.
 
 END
 
@@ -17,13 +29,17 @@ CSS - use Bootstrap
 
 FUNCTIONS
 
-Initalize
+Initalize()
+    renderView() {
+        setPage: 1
+    }
 
-Render
+**Handlers for buttons**
+goBtn = document.getElementById("btn"); - start button
 
-Handlers for buttons
+navigateBtn = document.getElementById("next"); - next button
 
-go - start - or navigate
+resetBtn = document.getElementById("reset-btn"); - reset button
 
 resetUI
 
