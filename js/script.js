@@ -13,17 +13,16 @@ resetBtn = document.getElementById("reset-btn");
 resetBtn.addEventListener('click', reset());
 
 // render application
-function renderView() {
+function renderView() {}
 let appMindReader = document.getElementById("doc");
 appMindReader.innerHTML = content;
 
 let content = "Mind reader application. Guess a number between 0-99, and I'll show you the symbol."
+
+
+let pages = {[
+ appMindReader.innerHTML: "Pick a number between 0 and 99"
 }
-
-let pages = {
-
-}
-
 // functions
 
 let app
