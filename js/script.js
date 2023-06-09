@@ -33,7 +33,7 @@ const pages = {
 
 // functions
 function initializeUI(e) {
-    chosenSymbol = Math.floor(Math.random()*randomSymbols.length);
+    chosenSymbol = randomSymbols[Math.floor(Math.random()*randomSymbols.length)];
     renderView();
 }
 
