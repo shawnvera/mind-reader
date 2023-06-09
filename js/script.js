@@ -34,8 +34,8 @@ const pages = {
     3: "Add both digits together to get a new number (ex: 15 would be 1 + 5 = 6).",
     4: "Subtract your new number from the original number (ex: 15 - 5 = 10)",
     5: randomSymbols,
-    6: "Your symbol is:",
-    7: ""
+    6: "Your symbol is: ",
+    7: "Click reset to play again!"
 };
 
 // functions
@@ -58,6 +58,26 @@ function incPage(e) {
 
 function renderView(e) {
     if (currentPage === 1) {
+        goBtn.style.visibility = "visible";
+        resetBtn.style.visibility = "hidden";
+        nextBtn.style.visibility = "hidden";
+    } else if (currentPage === 2) {
+        goBtn.style.visibility = "hidden";
+        resetBtn.style.visibility = "visible";
+        nextBtn.style.visibility = "visible";
+    } else if (currentPage === 3) {
+        goBtn.style.visibility = "hidden";
+        resetBtn.style.visibility = "visible";
+        nextBtn.style.visibility = "visible";
+    } else if (currentPage === 4) {
+        goBtn.style.visibility = "hidden";
+        resetBtn.style.visibility = "visible";
+        nextBtn.style.visibility = "visible";
+    } else if (currentPage === 5) {
+        goBtn.style.visibility = "hidden";
+        resetBtn.style.visibility = "visible";
+        nextBtn.style.visibility = "visible";
+    } else if (currentPage === 6) {
         goBtn.style.visibility = "hidden";
         resetBtn.style.visibility = "visible";
         nextBtn.style.visibility = "visible";
