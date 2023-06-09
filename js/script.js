@@ -10,12 +10,7 @@ resetBtn = document.getElementById("reset-btn");
 resetBtn.addEventListener('click', resetUI);
 resetBtn.style.visibility = "hidden";
 
-// render application
-/* function renderView() { }
-let appMindReader = document.getElementById("doc");
-appMindReader.innerHTML = content;
-*/
-
+// declaring  global variables and array
 let content = "Mind reader application. Guess a number between 0-99, and I'll show you the symbol."
 
 let currentPage = 1;
@@ -23,8 +18,6 @@ let currentPage = 1;
 let randomSymbols = [
     "1 = !", "2 = @", "3 = #", "4 = $", "5 = %", "6 = ^", "7 = &", "8 = *", "9 = !"
 ]
-
-
 
 let chosenSymbol = "";
 
@@ -39,17 +32,10 @@ const pages = {
 };
 
 // functions
-
-let app
-
 function initializeUI(e) {
     chosenSymbol = Math.floor(Math.random()*randomSymbols.length);
     renderView();
-    // make loop for 99 symbols
-    // make variable to hold the symbols
-
 }
-console.log(chosenSymbol);
 
 //hides goBtn, show resetBtn, increments page
 function incPage(e) {
@@ -57,6 +43,7 @@ function incPage(e) {
     renderView(e);
 }
 
+// render application
 function renderView(e) {
     if (currentPage === 1) {
         goBtn.style.visibility = "visible";
@@ -83,7 +70,6 @@ function renderView(e) {
         resetBtn.style.visibility = "visible";
         nextBtn.style.visibility = "visible";
     }
-    // make 6 more of these ifs
     document.getElementById("content").textContent = pages[currentPage];
 }
 
@@ -91,30 +77,3 @@ function resetUI(e) {
     currentPage = 1;
     initializeUI();
 }
-
-
-
-function changeState(e) {
-
-}
-
-// random symbols array
-
-
-/* ### Functional ###
-
-START
-FUNCTIONS
-
-
-setState
-
-// generateSymbols - 
-
-console.log(randomSymbolsGenerator);
-### Object oriented ###
-
-let mindReader = () => {
-
-}
-*/
