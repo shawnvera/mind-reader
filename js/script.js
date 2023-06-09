@@ -1,16 +1,13 @@
 // creating buttons and event handlers
-
-// goBtn = document.getElementById("btn"); - start button
 let goBtn = document.getElementById('go-btn');
 goBtn.addEventListener('click', incPage());
 
-// navigateBtn = document.getElementById("next"); - next button
 nextBtn = document.getElementById("next-btn");
 nextBtn.addEventListener('click', incPage());
 
-// resetBtn = document.getElementById("reset-btn"); - reset button
 resetBtn = document.getElementById("reset-btn");
 resetBtn.addEventListener('click', reset());
+resetBtn.style.visibility = "hidden";
 
 // render application
 function renderView() {}
@@ -34,7 +31,8 @@ function initializeUI(e){
 }
 
 function incPage(e){
-    
+    goBtn.style.visibility = "hidden";
+    resetBtn.style.visibility = "visible";
 }
 
 function resetUI(e){
@@ -45,6 +43,11 @@ function changeState(e){
 
 }
 
+// random symbols array
+let randomSymbols = [
+    "!", "@", "#", "$", "%", "^", "&", "*", "!"
+]
+
 ### Functional ###
 
 START
@@ -53,7 +56,8 @@ FUNCTIONS
 
 setState
 
-generateSymbols - 
+// generateSymbols - 
+let randomSymbolsGenerator = Math.round(Math.random(randomSymbols));
 
 ### Object oriented ###
 
