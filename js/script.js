@@ -21,7 +21,7 @@ let content = "Mind reader application. Guess a number between 0-99, and I'll sh
 let currentPage = 1;
 
 let randomSymbols = [
-    "!", "@", "#", "$", "%", "^", "&", "*", "!"
+    "1 = !", "2 = @", "3 = #", "4 = $", "5 = %", "6 = ^", "7 = &", "8 = *", "9 = !"
 ]
 
 
@@ -34,7 +34,7 @@ const pages = {
     3: "Add both digits together to get a new number (ex: 15 would be 1 + 5 = 6).",
     4: "Subtract your new number from the original number (ex: 15 - 5 = 10)",
     5: randomSymbols,
-    6: "Your symbol is: ",
+    6: `Your symbol is: !`,
     7: "Click reset to play again!"
 };
 
@@ -43,12 +43,13 @@ const pages = {
 let app
 
 function initializeUI(e) {
-    chosenSymbol = Math.round(Math.random(randomSymbols));
+    chosenSymbol = Math.floor(Math.random()*randomSymbols.length);
     renderView();
     // make loop for 99 symbols
     // make variable to hold the symbols
 
 }
+console.log(chosenSymbol);
 
 //hides goBtn, show resetBtn, increments page
 function incPage(e) {
